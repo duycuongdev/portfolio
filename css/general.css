@@ -1,35 +1,114 @@
-/* define for entire project */
-* {
+/* ── Global Reset & Base ── */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-main);
-  background-color: var(--bg-color);
-  color: var(--text-dark);
-  line-height: 1.4;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.65;
   font-size: var(--fs-body);
-  padding: 40px 20px;
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
-.resume-container {
-  max-width: 1280px;
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-light);
+}
+
+/* ── Container ── */
+.container {
+  max-width: var(--container-max);
   margin: 0 auto;
-  position: relative;
+  padding: 0 24px;
 }
 
+/* ── Links ── */
 a {
   text-decoration: none;
-  color: inherit
+  color: var(--accent);
+  transition: var(--transition-fast);
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--accent-dark);
 }
 
-a.colorful-link {
-  color: var(--color-teal);
-  font-weight: 500
+/* ── Section ── */
+.section {
+  padding: var(--section-padding);
+  overflow-x: clip;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.section-title span {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  max-width: 600px;
+  margin: 12px auto 0;
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.section-line {
+  width: 56px;
+  height: 3px;
+  background: var(--gradient-accent);
+  margin: 16px auto 0;
+  border-radius: 2px;
 }

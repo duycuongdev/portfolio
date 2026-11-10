@@ -1,0 +1,64 @@
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify and prepare static site bundle
+        run: |
+          set -euo pipefail
+          for file in \
+            index.html \
+            css/index.css \
+            css/variable.css \
+            css/general.css \
+            css/header.css \
+            css/main-content.css \
+            css/responsive.css \
+            js/aos-init.js \
+            assets/ico/logo.jpg \
+            assets/img/avatar.jpg \
+            assets/img/trello/01-landing-page.png \
+            assets/img/trello/03-boards-dashboard.png \
+            assets/img/trello/08-kanban-board.png \
+            assets/img/trello/09-card-modal-overview.png; do
+            test -f "$file" || { echo "Missing required file: $file"; exit 1; }
+          done
+
+          mkdir -p _site
+          cp index.html _site/
+          cp -r assets css js _site/
+          touch _site/.nojekyll
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
