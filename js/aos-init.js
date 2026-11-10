@@ -10,52 +10,75 @@ if (typeof AOS !== 'undefined') {
 
 // ── Navbar scroll effect ──
 const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', () => {
+const updateNavbarScroll = () => {
   if (!navbar) return;
-  if (window.scrollY > 40) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+};
+window.addEventListener('scroll', updateNavbarScroll, { passive: true });
+updateNavbarScroll();
 
 // ── Mobile menu toggle ──
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
+const setMobileMenuState = isOpen => {
+  if (!hamburger || !navMenu) return;
+  hamburger.classList.toggle('active', isOpen);
+  navMenu.classList.toggle('active', isOpen);
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+};
+
 if (hamburger && navMenu) {
   hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
+    setMobileMenuState(!navMenu.classList.contains('active'));
   });
 
   navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navMenu.classList.remove('active');
-    });
+    link.addEventListener('click', () => setMobileMenuState(false));
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+      setMobileMenuState(false);
+    }
+  });
+
+  document.addEventListener('click', e => {
+    if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+      setMobileMenuState(false);
+    }
   });
 }
 
 // ── Active nav link on scroll ──
 const sections = document.querySelectorAll('.section[id]');
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY + 120;
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const sectionId = section.getAttribute('id');
-    const navLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+const navLinks = document.querySelectorAll('.nav-links a');
 
-    if (navLink) {
+const updateActiveSection = () => {
+  if (!sections.length) return;
+  const atPageBottom = window.scrollY > 120 && (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 20);
+  const scrollY = window.scrollY + 120;
+  let currentId = '';
+
+  if (atPageBottom) {
+    currentId = sections[sections.length - 1].getAttribute('id');
+  } else {
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
       if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        navLink.classList.add('active');
-      } else {
-        navLink.classList.remove('active');
+        currentId = section.getAttribute('id');
       }
-    }
+    });
+  }
+
+  navLinks.forEach(link => {
+    link.classList.toggle('active', currentId !== '' && link.getAttribute('href') === `#${currentId}`);
   });
-});
+};
+
+window.addEventListener('scroll', updateActiveSection, { passive: true });
+updateActiveSection();
 
 // ── Trello Screenshot Gallery Tabs ──
 const galleryTabs = document.querySelectorAll('.gallery-tab');
@@ -66,8 +89,12 @@ const galleryUrl = document.getElementById('gallery-url');
 if (galleryTabs.length && galleryImage) {
   galleryTabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      galleryTabs.forEach(t => t.classList.remove('active'));
+      galleryTabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
       tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
 
       const src = tab.dataset.src;
       const alt = tab.dataset.alt;
@@ -81,7 +108,18 @@ if (galleryTabs.length && galleryImage) {
         if (galleryCaption) galleryCaption.textContent = caption;
         if (galleryUrl && url) galleryUrl.textContent = url;
         galleryImage.style.opacity = '1';
-      }, 150);
+      }, 140);
+    });
+  });
+
+  // Warm browser cache for secondary gallery tabs once initial page load completes
+  window.addEventListener('load', () => {
+    galleryTabs.forEach(tab => {
+      const src = tab.dataset.src;
+      if (src && !tab.classList.contains('active')) {
+        const img = new Image();
+        img.src = src;
+      }
     });
   });
 }

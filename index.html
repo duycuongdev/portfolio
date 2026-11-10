@@ -7,6 +7,16 @@
   <title>Nguyen Duy Cuong | Fullstack Web Developer</title>
   <meta name="description"
     content="Portfolio of Nguyen Duy Cuong (DuyCuongDev) — Fullstack Web Developer specializing in the MERN stack, real-time Socket.IO applications, and modern React interfaces.">
+  <link rel="canonical" href="https://duycuongdev.github.io/portfolio/">
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nguyen Duy Cuong | Fullstack Web Developer">
+  <meta property="og:description"
+    content="MERN-stack Fullstack Web Developer portfolio featuring Trello — Real-Time Kanban Workspace, architecture breakdown, and live demo.">
+  <meta property="og:url" content="https://duycuongdev.github.io/portfolio/">
+  <meta property="og:image" content="https://duycuongdev.github.io/portfolio/assets/img/trello/08-kanban-board.png">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="./assets/ico/logo.jpg">
 
@@ -42,7 +52,7 @@
     <div class="container">
       <a href="#" class="nav-logo">Duy<span>Cuong</span>Dev</a>
 
-      <div class="nav-menu">
+      <div class="nav-menu" id="primary-nav">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Tech Stack</a></li>
@@ -54,11 +64,11 @@
         </a>
       </div>
 
-      <div class="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+      <button type="button" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </div>
   </nav>
 
@@ -323,7 +333,7 @@
         <!-- Interactive Screenshot Showcase -->
         <div class="gallery-wrapper">
           <div class="gallery-tabs" role="tablist" aria-label="Trello project screenshots">
-            <button type="button" class="gallery-tab active"
+            <button type="button" role="tab" aria-selected="true" aria-controls="gallery-viewport" class="gallery-tab active"
               data-src="./assets/img/trello/08-kanban-board.png"
               data-alt="Trello Kanban Board with drag-and-drop columns and live presence"
               data-url="trello-web-tawny.vercel.app/boards/board-03"
@@ -331,7 +341,7 @@
               <i class="fas fa-columns"></i> Kanban Board
             </button>
 
-            <button type="button" class="gallery-tab"
+            <button type="button" role="tab" aria-selected="false" aria-controls="gallery-viewport" class="gallery-tab"
               data-src="./assets/img/trello/09-card-modal-overview.png"
               data-alt="Card Detail Modal with cover, labels, due dates, and Markdown editor"
               data-url="trello-web-tawny.vercel.app/boards/board-03?cardId=..."
@@ -339,7 +349,7 @@
               <i class="fas fa-credit-card"></i> Card Modal
             </button>
 
-            <button type="button" class="gallery-tab"
+            <button type="button" role="tab" aria-selected="false" aria-controls="gallery-viewport" class="gallery-tab"
               data-src="./assets/img/trello/03-boards-dashboard.png"
               data-alt="Boards Dashboard with workspace boards and pagination"
               data-url="trello-web-tawny.vercel.app/boards"
@@ -347,7 +357,7 @@
               <i class="fas fa-th-large"></i> Dashboard
             </button>
 
-            <button type="button" class="gallery-tab"
+            <button type="button" role="tab" aria-selected="false" aria-controls="gallery-viewport" class="gallery-tab"
               data-src="./assets/img/trello/01-landing-page.png"
               data-alt="Trello Clone Landing Page"
               data-url="trello-web-tawny.vercel.app"
@@ -356,7 +366,7 @@
             </button>
           </div>
 
-          <div class="gallery-browser">
+          <div class="gallery-browser" id="gallery-viewport" role="tabpanel">
             <div class="browser-bar">
               <div class="browser-dots">
                 <span></span><span></span><span></span>
@@ -460,11 +470,16 @@
       <div class="cv-banner" data-aos="fade-up">
         <div>
           <h3>Interested in working together?</h3>
-          <p>I am currently open to Fullstack Intern and Fresher opportunities. Feel free to reach out via email or explore my code on GitHub.</p>
+          <p>I am currently open to Fullstack Intern and Fresher opportunities. Review my 1-page CV or reach out directly via email.</p>
         </div>
-        <a href="mailto:nguyenduycuongndc2004@gmail.com" class="cv-banner-btn">
-          <i class="fas fa-envelope"></i> Send Email
-        </a>
+        <div class="cv-banner-actions">
+          <a href="https://duycuongdev.github.io/curriculum-vitae/" target="_blank" rel="noopener noreferrer" class="cv-banner-btn cv-banner-btn-ghost">
+            <i class="fas fa-file-lines"></i> Online CV
+          </a>
+          <a href="mailto:nguyenduycuongndc2004@gmail.com" class="cv-banner-btn">
+            <i class="fas fa-envelope"></i> Send Email
+          </a>
+        </div>
       </div>
     </div>
   </section>

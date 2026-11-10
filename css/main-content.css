@@ -591,6 +591,14 @@
   min-width: 0;
 }
 
+.cv-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
 .cv-banner-btn {
   flex-shrink: 0;
   white-space: nowrap;
@@ -626,6 +634,19 @@
 .cv-banner-btn:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+}
+
+.cv-banner-btn-ghost {
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--color-white) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  box-shadow: none;
+}
+
+.cv-banner-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.28);
+  border-color: var(--color-white);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.14);
 }
 
 /* ══════════════════════════════════════════

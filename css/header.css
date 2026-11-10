@@ -99,6 +99,8 @@
   cursor: pointer;
   gap: 5px;
   padding: 6px;
+  background: transparent;
+  border: none;
 }
 
 .hamburger span {
