@@ -97,12 +97,16 @@
           <i class="fas fa-rocket"></i> Explore Project
         </a>
         <a href="https://trello-web-tawny.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-          <i class="fas fa-external-link-alt"></i> Live Trello Demo
+          <i class="fas fa-external-link-alt"></i> Live Demo (Trello Clone)
         </a>
         <a href="https://github.com/duycuongdev" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
           <i class="fab fa-github"></i> GitHub
         </a>
       </div>
+      <p class="demo-note">
+        <i class="fas fa-circle-info"></i> Backend runs on Render free tier — the first request may take ~30s to wake up.
+        On the login page, use <strong>“Try as Guest”</strong> to explore instantly (no sign-up needed).
+      </p>
     </div>
 
     <a href="#about" class="scroll-indicator" aria-label="Scroll to About">
@@ -296,8 +300,8 @@
     <div class="container">
       <div class="section-header" data-aos="fade-up">
         <span class="section-eyebrow">Proof of Work</span>
-        <h2 class="section-title">Featured <span>Project</span></h2>
-        <p class="section-subtitle">A production-style full-stack Kanban collaboration platform engineered end to end.</p>
+        <h2 class="section-title">My <span>Project</span></h2>
+        <p class="section-subtitle">A full-stack Kanban collaboration platform engineered end to end — currently my main shipped project; more small projects are on the way.</p>
         <div class="section-line"></div>
       </div>
 
@@ -306,11 +310,11 @@
         <div class="project-top">
           <div>
             <div class="featured-badge">
-              <i class="fas fa-star"></i> Fullstack Solo Project
+              <i class="fas fa-star"></i> Fullstack Solo Project · Trello Clone
             </div>
-            <h3 class="project-title">Trello — Real-Time Kanban Workspace</h3>
+            <h3 class="project-title">Trello Clone — Real-Time Kanban Workspace</h3>
             <p class="project-subtitle">
-              A decoupled full-stack MERN task & project management platform featuring drag-and-drop boards, Socket.IO real-time team collaboration, Dual-Auth security, and automated CI testing.
+              A decoupled full-stack MERN task &amp; project management platform (a Trello clone built for learning, not affiliated with Atlassian) featuring drag-and-drop boards, Socket.IO real-time team collaboration, Dual-Auth security, and automated CI testing.
             </p>
           </div>
 
@@ -319,41 +323,52 @@
               class="project-link live">
               <i class="fas fa-external-link-alt"></i> Live Demo
             </a>
-            <a href="https://github.com/duycuongdev/trello-web" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/duycuongdev/Trello_Web" target="_blank" rel="noopener noreferrer"
               class="project-link github">
               <i class="fab fa-github"></i> Frontend Repo
             </a>
-            <a href="https://github.com/duycuongdev/trello-api" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/duycuongdev/Trello_Api" target="_blank" rel="noopener noreferrer"
               class="project-link github">
               <i class="fab fa-github"></i> Backend Repo
             </a>
           </div>
         </div>
 
+        <!-- Guest demo instructions -->
+        <div class="guest-demo-note">
+          <i class="fas fa-user-lock"></i>
+          <span>
+            <strong>Want to try it?</strong> Registration needs email activation, so use the
+            <strong>“Try as Guest”</strong> button on the <a href="https://trello-web-tawny.vercel.app/login" target="_blank" rel="noopener noreferrer">login page</a>
+            — it signs you into a ready-made demo workspace (board “Website Redesign — Launch Plan”) in one click.
+            <em>Note: the backend sleeps on Render's free tier; the first request can take ~30s to wake up.</em>
+          </span>
+        </div>
+
         <!-- Interactive Screenshot Showcase -->
         <div class="gallery-wrapper">
-          <div class="gallery-tabs" role="tablist" aria-label="Trello project screenshots">
+          <div class="gallery-tabs" role="tablist" aria-label="Trello Clone project screenshots">
             <button type="button" role="tab" aria-selected="true" aria-controls="gallery-viewport" class="gallery-tab active"
               data-src="./assets/img/trello/08-kanban-board.png"
-              data-alt="Trello Kanban Board with drag-and-drop columns and live presence"
-              data-url="trello-web-tawny.vercel.app/boards/board-03"
-              data-caption="Interactive Kanban Board with @dnd-kit drag-and-drop, live user presence indicator, custom Unsplash backgrounds, and Light/Dark mode.">
+              data-alt="Trello Clone Kanban Board with drag-and-drop columns and live presence"
+              data-url="trello-web-tawny.vercel.app/boards/…/website-redesign-launch-plan"
+              data-caption="Interactive Kanban Board (demo board “Website Redesign — Launch Plan”) with @dnd-kit drag-and-drop, live user presence, custom Unsplash backgrounds, and Light/Dark mode.">
               <i class="fas fa-columns"></i> Kanban Board
             </button>
 
             <button type="button" role="tab" aria-selected="false" aria-controls="gallery-viewport" class="gallery-tab"
               data-src="./assets/img/trello/09-card-modal-overview.png"
-              data-alt="Card Detail Modal with cover, labels, due dates, and Markdown editor"
-              data-url="trello-web-tawny.vercel.app/boards/board-03?cardId=..."
-              data-caption="Card Workspace supporting deep URL linking (?cardId=...), Cloudinary cover images, color-coded labels, overdue deadline alerts, checklists, and Markdown editor.">
+              data-alt="Card Detail Modal with gradient cover, Bug label, OVERDUE alert, and Markdown description"
+              data-url="trello-web-tawny.vercel.app/boards/…?cardId=…"
+              data-caption="Card Workspace supporting deep URL linking (?cardId=...), gradient/Cloudinary covers, color-coded labels, automatic OVERDUE deadline alerts, checklists, comments, and a Markdown editor.">
               <i class="fas fa-credit-card"></i> Card Modal
             </button>
 
             <button type="button" role="tab" aria-selected="false" aria-controls="gallery-viewport" class="gallery-tab"
               data-src="./assets/img/trello/03-boards-dashboard.png"
-              data-alt="Boards Dashboard with workspace boards and pagination"
+              data-alt="Boards Dashboard with demo workspace boards and pagination"
               data-url="trello-web-tawny.vercel.app/boards"
-              data-caption="Unified Boards Dashboard displaying personal and shared collaborative workspaces with search filtering, closed boards lifecycle, and pagination.">
+              data-caption="Unified Boards Dashboard displaying personal and shared collaborative workspaces with search filtering, closed-board lifecycle, and pagination.">
               <i class="fas fa-th-large"></i> Dashboard
             </button>
 
@@ -361,7 +376,7 @@
               data-src="./assets/img/trello/01-landing-page.png"
               data-alt="Trello Clone Landing Page"
               data-url="trello-web-tawny.vercel.app"
-              data-caption="Clean product landing page introducing workspace features with quick Sign Up, Brevo email activation, and 1-click Google OAuth 2.0 login.">
+              data-caption="Clean product landing page introducing workspace features with quick Sign Up, Brevo email activation, 1-click Google OAuth 2.0 login, and the Try as Guest demo button.">
               <i class="fas fa-home"></i> Landing Page
             </button>
           </div>
@@ -371,15 +386,85 @@
               <div class="browser-dots">
                 <span></span><span></span><span></span>
               </div>
-              <div class="browser-url" id="gallery-url">trello-web-tawny.vercel.app/boards/board-03</div>
+              <div class="browser-url" id="gallery-url">trello-web-tawny.vercel.app/boards/…/website-redesign-launch-plan</div>
             </div>
             <div class="gallery-viewport">
               <img id="gallery-image" src="./assets/img/trello/08-kanban-board.png"
-                alt="Trello Kanban Board with drag-and-drop columns and live presence">
+                alt="Trello Clone Kanban Board with drag-and-drop columns and live presence">
             </div>
             <div class="gallery-caption">
               <i class="fas fa-info-circle"></i>
-              <span id="gallery-caption-text">Interactive Kanban Board with @dnd-kit drag-and-drop, live user presence indicator, custom Unsplash backgrounds, and Light/Dark mode.</span>
+              <span id="gallery-caption-text">Interactive Kanban Board (demo board “Website Redesign — Launch Plan”) with @dnd-kit drag-and-drop, live user presence, custom Unsplash backgrounds, and Light/Dark mode.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══ Real-Time Proof: GIF + Architecture ══ -->
+        <div class="realtime-proof">
+          <div class="proof-block" data-aos="fade-up">
+            <h4 class="proof-title"><i class="fas fa-bolt"></i> Real-time in action — two windows, one board</h4>
+            <p class="proof-desc">
+              Two independent browser sessions (two different guests) watching the same board. Dragging the
+              <strong>“Fix cross-browser cookie issues (Safari)”</strong> card from <em>In Progress</em> into <em>To Do</em>
+              in the left window propagates instantly to the right window through the Socket.IO <code>board:&lt;id&gt;</code> room —
+              no refresh, no polling.
+            </p>
+            <img class="proof-gif" src="./assets/img/trello/16-realtime-demo.gif"
+              alt="Animated demo: dragging a card in one window updates the same board instantly in a second window via Socket.IO"
+              loading="lazy">
+          </div>
+
+          <div class="proof-block" data-aos="fade-up">
+            <h4 class="proof-title"><i class="fas fa-diagram-project"></i> System architecture</h4>
+            <p class="proof-desc">
+              Decoupled SPA ↔ API design: REST for CRUD, one WebSocket room per board for live updates, and third-party
+              services (Google OAuth, Brevo, Cloudinary) isolated behind the Express layer.
+            </p>
+            <img class="proof-diagram" src="./assets/img/trello/architecture-diagram.svg"
+              alt="Architecture diagram: React SPA on Vercel talks REST and Socket.IO to the Node/Express API on Render, which stores data in MongoDB Atlas and integrates Google OAuth, Brevo email and Cloudinary"
+              loading="lazy">
+          </div>
+        </div>
+
+        <!-- ══ Engineering Challenges ══ -->
+        <div class="challenges" data-aos="fade-up">
+          <h4 class="proof-title"><i class="fas fa-screwdriver-wrench"></i> Hard problems I had to solve</h4>
+          <div class="challenge-grid">
+            <div class="challenge-card">
+              <h5><i class="fas fa-key-rotate"></i> Silent JWT refresh without logging users out</h5>
+              <p>
+                Any request can hit <code>401</code> right when the access token expires — including parallel requests,
+                each triggering its own refresh. I solved it with an Axios response interceptor that queues concurrent
+                401s behind a single <code>refresh_token</code> call (server-side Refresh Token Rotation marks each token
+                single-use; reuse revokes the whole session), then replays the queued requests.
+              </p>
+            </div>
+            <div class="challenge-card">
+              <h5><i class="fas fa-cookie-bite"></i> Cookies blocked on some browsers</h5>
+              <p>
+                Safari's ITP blocks third-party cookie flows, which broke the HttpOnly cookie auth. Instead of fighting
+                the browser, I made the backend accept <strong>Dual-Auth</strong>: HttpOnly cookies in normal browsers,
+                automatic Bearer-header fallback everywhere else — same endpoints, no duplicated auth code.
+              </p>
+            </div>
+            <div class="challenge-card">
+              <h5><i class="fas fa-arrows-rotate"></i> Optimistic UI vs. Socket.IO reconciliation</h5>
+              <p>
+                Drag-and-drop updates the board instantly on the client, but other clients learn about the move via the
+                <code>board:&lt;id&gt;</code> room. Keeping both consistent required structural state updates and a fix in
+                <code>handleDragEnd</code>: after <code>onDragOver</code> already relocates a card, the end handler must use
+                the <em>source column captured at drag start</em>, otherwise the card vanishes from every connected client
+                (a bug I found, reproduced with two windows, and fixed).
+              </p>
+            </div>
+            <div class="challenge-card">
+              <h5><i class="fas fa-database"></i> Keeping cardOrderIds consistent with cards</h5>
+              <p>
+                Card order lives in ordered <code>ObjectId</code> arrays on the column document, so a cross-column move
+                touches three documents. I moved the whole operation into a MongoDB <strong>multi-document transaction</strong>
+                (<code>withTransaction</code>) and verified it with integration tests — a failed write can no longer leave a
+                card orphaned between two columns.
+              </p>
             </div>
           </div>
         </div>
@@ -403,28 +488,42 @@
               <i class="fas fa-server"></i> Backend & Real-Time Engine (Node.js + MongoDB)
             </div>
             <ul class="arch-list">
-              <li><strong>Dual-Auth Security</strong> supporting both HttpOnly Cookies and Bearer headers + JWT Refresh Token Rotation + Google OAuth 2.0</li>
+              <li><strong>41 REST endpoints</strong> (<code>/v1</code>) with <strong>Dual-Auth Security</strong> — HttpOnly Cookies + Bearer fallback — plus JWT Refresh Token Rotation and Google OAuth 2.0</li>
               <li><strong>Socket.IO</strong> board room synchronization (<code>board:&lt;id&gt;</code>) for live presence, instant card updates, comments & invitations</li>
-              <li><strong>MongoDB Aggregation Pipelines</strong> unifying board invitations and approaching/overdue card deadline alerts</li>
-              <li><strong>Cloudinary</strong> file/cover uploads, <strong>Brevo</strong> verification emails, <strong>Swagger</strong> docs (<code>/v1/docs</code>), Unit/E2E tests & <strong>GitHub Actions CI</strong></li>
+              <li><strong>MongoDB Aggregation Pipelines</strong> unifying board invitations and approaching/overdue card deadline alerts, with multi-document transactions for atomic moves</li>
+              <li><strong>Cloudinary</strong> file/cover uploads, <strong>Brevo</strong> verification emails, <strong>Swagger</strong> docs (<code>/v1/docs</code>), <strong>43 unit &amp; integration tests</strong> (<code>node --test</code>) & <strong>GitHub Actions CI</strong></li>
             </ul>
           </div>
         </div>
 
-        <!-- Tech Stack Badges -->
-        <div class="tech-stack">
-          <span class="tech-badge">React 18</span>
-          <span class="tech-badge">Vite</span>
-          <span class="tech-badge">Material UI v5</span>
-          <span class="tech-badge">Redux Toolkit</span>
-          <span class="tech-badge">@dnd-kit</span>
-          <span class="tech-badge">Socket.IO</span>
-          <span class="tech-badge">Node.js</span>
-          <span class="tech-badge">Express.js</span>
-          <span class="tech-badge">MongoDB</span>
-          <span class="tech-badge">JWT & Google OAuth</span>
-          <span class="tech-badge">Cloudinary</span>
-          <span class="tech-badge">Swagger & GitHub Actions</span>
+        <!-- Tech Stack: Proficient vs Familiar -->
+        <div class="tech-stack-groups">
+          <div class="tech-stack-group">
+            <div class="tech-stack-label"><i class="fas fa-circle-check"></i> Proficient — used daily in this project</div>
+            <div class="tech-stack">
+              <span class="tech-badge strong">React 18</span>
+              <span class="tech-badge strong">Vite</span>
+              <span class="tech-badge strong">Material UI v5</span>
+              <span class="tech-badge strong">Redux Toolkit</span>
+              <span class="tech-badge strong">@dnd-kit</span>
+              <span class="tech-badge strong">Socket.IO</span>
+              <span class="tech-badge strong">Node.js</span>
+              <span class="tech-badge strong">Express.js</span>
+              <span class="tech-badge strong">MongoDB</span>
+              <span class="tech-badge strong">JWT & Google OAuth</span>
+              <span class="tech-badge strong">Cloudinary</span>
+              <span class="tech-badge strong">Swagger</span>
+              <span class="tech-badge strong">GitHub Actions CI</span>
+            </div>
+          </div>
+          <div class="tech-stack-group">
+            <div class="tech-stack-label"><i class="fas fa-seedling"></i> Familiar — basics through coursework & side experiments</div>
+            <div class="tech-stack">
+              <span class="tech-badge soft">TypeScript</span>
+              <span class="tech-badge soft">Tailwind CSS</span>
+              <span class="tech-badge soft">Postman</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -470,9 +569,12 @@
       <div class="cv-banner" data-aos="fade-up">
         <div>
           <h3>Interested in working together?</h3>
-          <p>I am currently open to Fullstack Intern and Fresher opportunities. Review my 1-page CV or reach out directly via email.</p>
+          <p>I am currently open to Fullstack Intern and Fresher opportunities. Download my 1-page CV (PDF) or reach out directly via email.</p>
         </div>
         <div class="cv-banner-actions">
+          <a href="https://duycuongdev.github.io/curriculum-vitae/assets/NguyenDuyCuong-CV-EN.pdf" target="_blank" rel="noopener noreferrer" class="cv-banner-btn cv-banner-btn-ghost">
+            <i class="fas fa-file-pdf"></i> Download CV (PDF)
+          </a>
           <a href="https://duycuongdev.github.io/curriculum-vitae/" target="_blank" rel="noopener noreferrer" class="cv-banner-btn cv-banner-btn-ghost">
             <i class="fas fa-file-lines"></i> Online CV
           </a>

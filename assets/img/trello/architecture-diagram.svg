@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 640" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+    <linearGradient id="gFE" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="gBE" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dcfce7"/><stop offset="1" stop-color="#d1fae5"/>
+    </linearGradient>
+    <linearGradient id="gDB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fef9c3"/><stop offset="1" stop-color="#fef3c7"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .box { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; rx: 14; }
+    .title { font-size: 17px; font-weight: 700; fill: #0f172a; }
+    .subtitle { font-size: 12px; font-weight: 600; fill: #64748b; }
+    .item { font-size: 12.5px; fill: #334155; }
+    .deploy { font-size: 11.5px; font-weight: 700; fill: #7c3aed; }
+    .wire { stroke: #64748b; stroke-width: 2; fill: none; }
+    .wireLabel { font-size: 12px; font-weight: 700; fill: #334155; }
+    .wireSub { font-size: 10.5px; fill: #64748b; }
+    .svcTitle { font-size: 12.5px; font-weight: 700; fill: #0f172a; }
+    .svcSub { font-size: 10.5px; fill: #64748b; }
+  </style>
+
+  <!-- ══ FRONTEND ══ -->
+  <g transform="translate(30,110)">
+    <rect class="box" width="300" height="330" rx="14" fill="url(#gFE)"/>
+    <text x="150" y="34" text-anchor="middle" class="title">🖥️ React 18 SPA</text>
+    <text x="150" y="54" text-anchor="middle" class="subtitle">Frontend — deployed on Vercel</text>
+    <g transform="translate(20,78)">
+      <rect width="260" height="44" rx="9" fill="#ffffff" stroke="#bfdbfe"/>
+      <text x="14" y="18" class="item" font-weight="700">Redux Toolkit + Persist</text>
+      <text x="14" y="35" class="svcSub">Predictable state, snapshot persistence</text>
+    </g>
+    <g transform="translate(20,132)">
+      <rect width="260" height="44" rx="9" fill="#ffffff" stroke="#bfdbfe"/>
+      <text x="14" y="18" class="item" font-weight="700">@dnd-kit drag &amp; drop</text>
+      <text x="14" y="35" class="svcSub">Columns &amp; cards, optimistic updates</text>
+    </g>
+    <g transform="translate(20,186)">
+      <rect width="260" height="44" rx="9" fill="#ffffff" stroke="#bfdbfe"/>
+      <text x="14" y="18" class="item" font-weight="700">Axios interceptors</text>
+      <text x="14" y="35" class="svcSub">Silent JWT refresh on 401</text>
+    </g>
+    <g transform="translate(20,240)">
+      <rect width="260" height="44" rx="9" fill="#ffffff" stroke="#bfdbfe"/>
+      <text x="14" y="18" class="item" font-weight="700">Socket.IO Client</text>
+      <text x="14" y="35" class="svcSub">Joins board:&lt;id&gt; room on open</text>
+    </g>
+    <text x="150" y="315" text-anchor="middle" class="deploy">▲ Vercel · CI: GitHub Actions</text>
+  </g>
+
+  <!-- ══ WIRES FE → BE ══ -->
+  <g>
+    <path class="wire" d="M 336 210 C 400 210, 430 230, 492 230" marker-end="url(#arrowBlue)"/>
+    <text x="412" y="200" text-anchor="middle" class="wireLabel" fill="#2563eb">REST /v1</text>
+    <text x="412" y="248" text-anchor="middle" class="wireSub">41 endpoints · JWT Bearer</text>
+    <path class="wire" stroke="#0ea5e9" stroke-dasharray="7 5" d="M 336 330 C 400 330, 430 310, 492 310" marker-end="url(#arrow)"/>
+    <text x="412" y="352" text-anchor="middle" class="wireLabel" fill="#0ea5e9">WebSocket</text>
+    <text x="412" y="300" text-anchor="middle" class="wireSub">Socket.IO room board:&lt;id&gt;</text>
+    <text x="412" y="316" text-anchor="middle" class="wireSub">instant board sync</text>
+  </g>
+
+  <!-- ══ BACKEND ══ -->
+  <g transform="translate(498,80)">
+    <rect class="box" width="310" height="390" rx="14" fill="url(#gBE)"/>
+    <text x="155" y="34" text-anchor="middle" class="title">⚙️ Node.js + Express</text>
+    <text x="155" y="54" text-anchor="middle" class="subtitle">REST API + Socket.IO — deployed on Render</text>
+    <g transform="translate(20,76)">
+      <rect width="270" height="46" rx="9" fill="#ffffff" stroke="#a7f3d0"/>
+      <text x="14" y="19" class="item" font-weight="700">🔐 Dual-Auth + JWT Rotation</text>
+      <text x="14" y="36" class="svcSub">HttpOnly cookies + Bearer fallback</text>
+    </g>
+    <g transform="translate(20,132)">
+      <rect width="270" height="46" rx="9" fill="#ffffff" stroke="#a7f3d0"/>
+      <text x="14" y="19" class="item" font-weight="700">🛡️ Joi validation + rate limiting</text>
+      <text x="14" y="36" class="svcSub">Per-route limits, IDOR guards</text>
+    </g>
+    <g transform="translate(20,188)">
+      <rect width="270" height="46" rx="9" fill="#ffffff" stroke="#a7f3d0"/>
+      <text x="14" y="19" class="item" font-weight="700">🧪 node:test suites (43 tests)</text>
+      <text x="14" y="36" class="svcSub">Unit + integration incl. IDOR &amp; rotation</text>
+    </g>
+    <g transform="translate(20,244)">
+      <rect width="270" height="46" rx="9" fill="#ffffff" stroke="#a7f3d0"/>
+      <text x="14" y="19" class="item" font-weight="700">📚 Swagger /v1/docs</text>
+      <text x="14" y="36" class="svcSub">OpenAPI 3.0, health check /v1/health</text>
+    </g>
+    <g transform="translate(20,300)">
+      <rect width="270" height="46" rx="9" fill="#ffffff" stroke="#a7f3d0"/>
+      <text x="14" y="19" class="item" font-weight="700">🔁 Socket.IO server</text>
+      <text x="14" y="36" class="svcSub">Presence, invites, deadline alerts</text>
+    </g>
+    <text x="155" y="374" text-anchor="middle" class="deploy">☁️ Render (free tier · cold start ~30s)</text>
+  </g>
+
+  <!-- ══ MONGODB ══ -->
+  <g transform="translate(880,300)">
+    <rect class="box" width="270" height="170" rx="14" fill="url(#gDB)"/>
+    <text x="135" y="34" text-anchor="middle" class="title">🍃 MongoDB Atlas</text>
+    <text x="135" y="54" text-anchor="middle" class="subtitle">Native driver · multi-document transactions</text>
+    <text x="20" y="88" class="item">• Aggregation pipelines (invitations,</text>
+    <text x="34" y="106" class="item">deadline “Due Soon / Overdue” alerts)</text>
+    <text x="20" y="132" class="item">• Unique indexes: email, token hash</text>
+    <text x="20" y="152" class="item">• Atomic rotation via transactions</text>
+  </g>
+
+  <!-- wire BE → DB -->
+  <path class="wire" d="M 808 330 C 840 340, 848 360, 876 372" marker-end="url(#arrow)"/>
+  <text x="848" y="322" text-anchor="middle" class="wireSub">queries</text>
+
+  <!-- ══ EXTERNAL SERVICES ══ -->
+  <g transform="translate(880,40)">
+    <rect class="box" width="270" height="200" rx="14"/>
+    <text x="135" y="30" text-anchor="middle" class="title">🧩 Integrated services</text>
+    <g transform="translate(18,52)">
+      <rect width="234" height="40" rx="9" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="12" y="17" class="svcTitle">Google OAuth 2.0</text>
+      <text x="12" y="32" class="svcSub">1-click sign-in (ID token verify)</text>
+    </g>
+    <g transform="translate(18,100)">
+      <rect width="234" height="40" rx="9" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="12" y="17" class="svcTitle">✉️ Brevo Email API</text>
+      <text x="12" y="32" class="svcSub">Activation &amp; password-reset emails</text>
+    </g>
+    <g transform="translate(18,148)">
+      <rect width="234" height="40" rx="9" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="12" y="17" class="svcTitle">🖼️ Cloudinary</text>
+      <text x="12" y="32" class="svcSub">Covers, attachments, board backgrounds</text>
+    </g>
+  </g>
+  <path class="wire" stroke-dasharray="4 4" d="M 808 180 C 840 160, 848 150, 876 140" marker-end="url(#arrow)"/>
+
+  <!-- ══ GUEST LOGIN NOTE ══ -->
+  <g transform="translate(30,470)">
+    <rect width="1120" height="120" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="24" y="36" class="title" font-size="15">💡 Try as Guest flow</text>
+    <text x="24" y="62" class="item">POST /v1/users/guest_login → system-created shared account (isActive, no email step) → JWT pair issued → recruiters explore the seeded</text>
+    <text x="24" y="80" class="item">“Website Redesign — Launch Plan” board instantly. Same Dual-Auth cookies as normal login; rate-limited per IP (10 req / 15 min).</text>
+    <text x="24" y="104" class="wireSub">Render free tier wakes on first request — the landing page and this site show a “first load may take ~30s” note next to the Live Demo button.</text>
+  </g>
+</svg>
