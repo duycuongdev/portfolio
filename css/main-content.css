@@ -802,6 +802,11 @@
   transition: var(--transition-fast);
 }
 
+.challenge-card.featured-challenge {
+  grid-column: 1 / -1;
+  border-left: 4px solid #2563eb;
+}
+
 .challenge-card:hover {
   border-color: var(--border-accent);
   box-shadow: 0 6px 20px rgba(37, 99, 235, 0.08);

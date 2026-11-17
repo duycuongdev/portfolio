@@ -82,6 +82,14 @@
     grid-template-columns: 1fr;
   }
 
+  .challenge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .challenge-card.featured-challenge {
+    grid-column: auto;
+  }
+
   .skills-categories {
     grid-template-columns: 1fr 1fr;
     gap: 14px;
