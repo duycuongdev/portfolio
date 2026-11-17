@@ -1,6 +1,6 @@
 # Nguyen Duy Cuong — Personal Portfolio
 
-Personal developer portfolio showcasing my engineering focus, MERN & GenAI capabilities, and my main shipped full-stack project (**Kanflow — Real-Time Kanban & AI Workspace**).
+Personal developer portfolio showcasing my engineering focus as a Fullstack Developer & AI Engineer (MERN & GenAI), and my main shipped full-stack project (Kanflow — Real-Time Kanban & AI Workspace).
 
 - **Live Portfolio (GitHub Pages):** https://duycuongdev.github.io/portfolio/
 - **CV (EN):** https://duycuongdev.github.io/curriculum-vitae/ — **PDF:** [NguyenDuyCuong-CV-EN.pdf](https://duycuongdev.github.io/curriculum-vitae/assets/NguyenDuyCuong-CV-EN.pdf) ([Repository](https://github.com/duycuongdev/curriculum-vitae))

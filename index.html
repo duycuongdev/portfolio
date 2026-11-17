@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nguyen Duy Cuong | Fullstack Developer (MERN & GenAI)</title>
+  <title>Nguyen Duy Cuong | Fullstack Developer & AI Engineer</title>
   <meta name="description"
-    content="Portfolio of Nguyen Duy Cuong (DuyCuongDev) — Fullstack Developer specializing in the MERN stack, Generative AI (Google Gemini), real-time Socket.IO applications, and modern React interfaces.">
+    content="Portfolio of Nguyen Duy Cuong (DuyCuongDev) — Fullstack Developer & AI Engineer specializing in MERN stack, Generative AI (Google Gemini), real-time Socket.IO applications, and modern React interfaces.">
   <link rel="canonical" href="https://duycuongdev.github.io/portfolio/">
 
   <!-- Open Graph / Social Preview -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Nguyen Duy Cuong | Fullstack Developer (MERN & GenAI)">
+  <meta property="og:title" content="Nguyen Duy Cuong | Fullstack Developer & AI Engineer">
   <meta property="og:description"
-    content="Fullstack Developer portfolio featuring Kanflow — Real-Time Kanban & AI Workspace, architecture breakdown, and live demo.">
+    content="Fullstack Developer & AI Engineer portfolio featuring Kanflow — Real-Time Kanban & AI Workspace, architecture breakdown, and live demo.">
   <meta property="og:url" content="https://duycuongdev.github.io/portfolio/">
   <meta property="og:image" content="https://duycuongdev.github.io/portfolio/assets/img/trello/08-kanban-board.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -77,7 +77,7 @@
     <div class="hero-content">
       <div class="hero-badge">
         <span class="status-dot"></span>
-        Open to Fullstack Developer Opportunities
+        Open to Fullstack &amp; AI Engineer Opportunities
       </div>
 
       <div class="hero-avatar">
@@ -86,7 +86,7 @@
 
       <div class="hero-greeting">Hello there, I'm</div>
       <h1 class="hero-name">Nguyen Duy Cuong</h1>
-      <div class="hero-title">Fullstack Developer <span>(MERN &amp; GenAI)</span></div>
+      <div class="hero-title">Fullstack Developer &amp; AI Engineer <span>(MERN + GenAI)</span></div>
 
       <p class="hero-desc">
         Final-year IT student at PTIT crafting intelligent, real-time, and production-ready web applications—integrating generative AI, resilient architecture, and intuitive user interfaces.
@@ -103,9 +103,6 @@
           <i class="fab fa-github"></i> GitHub
         </a>
       </div>
-      <p class="demo-note">
-        <i class="fas fa-user-check"></i> <strong>Recruiter Test Account:</strong> <code>guest@duycuong.dev</code> &bull; Password: <code>Kanflow@2026</code> (or click <strong>“Try as Guest”</strong> on the login page).
-      </p>
     </div>
 
     <a href="#about" class="scroll-indicator" aria-label="Scroll to About">
@@ -128,7 +125,7 @@
             Turning complex product workflows into fast, clean, and reliable web software.
           </div>
           <p>
-            I am a final-year Information Technology student at the <strong>Posts and Telecommunications Institute of Technology (PTIT)</strong> in Hanoi, Vietnam, focusing on full-stack JavaScript development.
+            I am a final-year Information Technology student at the Posts and Telecommunications Institute of Technology (PTIT) in Hanoi, Vietnam, focusing on full-stack web development and generative AI.
           </p>
           <p>
             Rather than stopping at tutorials or static mockups, I enjoy building complete systems from scratch—designing RESTful APIs, handling tricky cross-browser authentication edge cases, synchronizing state in real time via WebSockets, and shipping live deployments on Vercel and Render.
@@ -345,7 +342,7 @@
         <div class="guest-demo-note">
           <i class="fas fa-user-lock"></i>
           <span>
-            <strong>Recruiter Quick Access:</strong> Test account: <code>guest@duycuong.dev</code> &bull; Password: <code>Kanflow@2026</code>, or click the <strong>“Try as Guest”</strong> button on the <a href="https://trello-web-tawny.vercel.app/login" target="_blank" rel="noopener noreferrer">login page</a> to enter the demo workspace with zero setup.
+            Recruiter Demo Access: Test account: <code>guest@duycuong.dev</code> &bull; Password: <code>Kanflow@2026</code>, or click the “Try as Guest” button on the <a href="https://trello-web-tawny.vercel.app/login" target="_blank" rel="noopener noreferrer">login page</a> to enter the demo workspace with zero setup.
           </span>
         </div>
 
@@ -409,7 +406,7 @@
             <h4 class="proof-title"><i class="fas fa-bolt"></i> Real-time in action — two windows, one board</h4>
             <p class="proof-desc">
               Two independent browser sessions (two different guests) watching the same board. Dragging the
-              <strong>“Fix cross-browser cookie issues (Safari)”</strong> card from <em>In Progress</em> into <em>To Do</em>
+              “Fix cross-browser cookie issues (Safari)” card from <em>In Progress</em> into <em>To Do</em>
               in the left window propagates instantly to the right window through the Socket.IO <code>board:&lt;id&gt;</code> room —
               no refresh, no polling.
             </p>
@@ -453,7 +450,7 @@
               <h5><i class="fas fa-cookie-bite"></i> Cookies blocked on some browsers</h5>
               <p>
                 Safari's ITP blocks third-party cookie flows, which broke the HttpOnly cookie auth. Instead of fighting
-                the browser, I made the backend accept <strong>Dual-Auth</strong>: HttpOnly cookies in normal browsers,
+                the browser, I made the backend accept Dual-Auth: HttpOnly cookies in normal browsers,
                 automatic Bearer-header fallback everywhere else — same endpoints, no duplicated auth code.
               </p>
             </div>
@@ -471,7 +468,7 @@
               <h5><i class="fas fa-database"></i> Keeping cardOrderIds consistent with cards</h5>
               <p>
                 Card order lives in ordered <code>ObjectId</code> arrays on the column document, so a cross-column move
-                touches three documents. I moved the whole operation into a MongoDB <strong>multi-document transaction</strong>
+                touches three documents. I moved the whole operation into a MongoDB multi-document transaction
                 (<code>withTransaction</code>) and verified it with integration tests — a failed write can no longer leave a
                 card orphaned between two columns.
               </p>
@@ -486,9 +483,9 @@
               <i class="fas fa-desktop"></i> Frontend Architecture (React + Vite)
             </div>
             <ul class="arch-list">
-              <li>Built-in <strong>Kanflow Assistant</strong> chatbot with board context awareness, bilingual chat, and 1-click structured board generation</li>
-              <li>Smooth column &amp; card drag-and-drop powered by <strong>@dnd-kit</strong> with custom collision detection and optimistic updates</li>
-              <li>Predictable state persistence via <strong>Redux Toolkit</strong> &amp; <strong>Redux Persist</strong> plus Axios interceptors for silent token refresh</li>
+              <li>Built-in Kanflow Assistant chatbot with board context awareness, bilingual chat, and 1-click structured board generation</li>
+              <li>Smooth column &amp; card drag-and-drop powered by @dnd-kit with custom collision detection and optimistic updates</li>
+              <li>Predictable state persistence via Redux Toolkit &amp; Redux Persist plus Axios interceptors for silent token refresh</li>
               <li>SEO-friendly board slugs (<code>/boards/:id/:slug</code>) and card modal deep-linking (<code>?cardId=...</code>)</li>
               <li>Rich Markdown descriptions, progress checklists, card filtering, Light/Dark themes, and Unsplash backgrounds</li>
             </ul>
@@ -499,11 +496,11 @@
               <i class="fas fa-server"></i> Backend, AI &amp; Real-Time Engine (Node.js + MongoDB)
             </div>
             <ul class="arch-list">
-              <li><strong>42+ REST endpoints</strong> (<code>/v1</code>) with <strong>Dual-Auth Security</strong> — HttpOnly Cookies + Bearer fallback — plus JWT Refresh Token Rotation and Google OAuth 2.0</li>
-              <li><strong>Kanflow Assistant (Google Gemini 2.5 Flash Lite)</strong> integration with multi-model fallback, JSON schema structured outputs, and streaming assistant responses</li>
-              <li><strong>Socket.IO</strong> board room synchronization (<code>board:&lt;id&gt;</code>) for live presence, instant card updates, comments &amp; invitations</li>
-              <li><strong>MongoDB Aggregation Pipelines</strong> unifying board invitations and approaching/overdue card deadline alerts, with multi-document transactions for atomic moves</li>
-              <li><strong>Cloudinary</strong> file/cover uploads, <strong>Brevo</strong> verification emails, <strong>Swagger</strong> docs (<code>/v1/docs</code>), <strong>48 unit &amp; integration tests</strong> (<code>node --test</code>) &amp; <strong>GitHub Actions CI</strong></li>
+              <li>42+ REST endpoints (<code>/v1</code>) with Dual-Auth Security — HttpOnly Cookies + Bearer fallback — plus JWT Refresh Token Rotation and Google OAuth 2.0</li>
+              <li>Kanflow Assistant (Google Gemini 2.5 Flash Lite) integration with multi-model fallback, JSON schema structured outputs, and streaming assistant responses</li>
+              <li>Socket.IO board room synchronization (<code>board:&lt;id&gt;</code>) for live presence, instant card updates, comments &amp; invitations</li>
+              <li>MongoDB Aggregation Pipelines unifying board invitations and approaching/overdue card deadline alerts, with multi-document transactions for atomic moves</li>
+              <li>Cloudinary file/cover uploads, Brevo verification emails, Swagger docs (<code>/v1/docs</code>), 48 unit &amp; integration tests (<code>node --test</code>) &amp; GitHub Actions CI</li>
             </ul>
           </div>
         </div>
