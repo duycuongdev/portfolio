@@ -3,8 +3,8 @@
 Personal developer portfolio showcasing my engineering focus as a Fullstack Developer & AI Engineer, and my main shipped full-stack project (Kanflow — Real-Time Kanban & AI Workspace).
 
 - **Live Portfolio (GitHub Pages):** https://duycuongdev.github.io/portfolio/
-- **CV (EN):** https://kanflow-smart.vercel.app/ — **PDF:** [NguyenDuyCuong-CV-EN.pdf](https://kanflow-smart.vercel.app/assets/NguyenDuyCuong-CV-EN.pdf) ([Repository](https://github.com/duycuongdev/curriculum-vitae))
-- **CV (VI):** https://kanflow-smart.vercel.app/cv-vi.html — **PDF:** [NguyenDuyCuong-CV-VI.pdf](https://kanflow-smart.vercel.app/assets/NguyenDuyCuong-CV-VI.pdf)
+- **CV (EN):** https://duycuongdev.github.io/curriculum-vitae/ — **PDF:** [NguyenDuyCuong-CV-EN.pdf](https://duycuongdev.github.io/curriculum-vitae/assets/NguyenDuyCuong-CV-EN.pdf) ([Repository](https://github.com/duycuongdev/curriculum-vitae))
+- **CV (VI):** https://duycuongdev.github.io/curriculum-vitae/cv-vi.html — **PDF:** [NguyenDuyCuong-CV-VI.pdf](https://duycuongdev.github.io/curriculum-vitae/assets/NguyenDuyCuong-CV-VI.pdf)
 - **GitHub:** https://github.com/duycuongdev
 
 ## Highlights
