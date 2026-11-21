@@ -3,8 +3,8 @@
 Personal developer portfolio showcasing my engineering focus as a Fullstack Developer & AI Engineer, and my main shipped full-stack project (Kanflow — Real-Time Kanban & AI Workspace).
 
 - **Live Portfolio (GitHub Pages):** https://duycuongdev.github.io/portfolio/
-- **CV (EN):** https://duycuongdev.github.io/curriculum-vitae/ — **PDF:** [NguyenDuyCuong-CV-EN.pdf](https://duycuongdev.github.io/curriculum-vitae/assets/NguyenDuyCuong-CV-EN.pdf) ([Repository](https://github.com/duycuongdev/curriculum-vitae))
-- **CV (VI):** https://duycuongdev.github.io/curriculum-vitae/cv-vi.html — **PDF:** [NguyenDuyCuong-CV-VI.pdf](https://duycuongdev.github.io/curriculum-vitae/assets/NguyenDuyCuong-CV-VI.pdf)
+- **CV (EN):** https://kanflow-smart.vercel.app/ — **PDF:** [NguyenDuyCuong-CV-EN.pdf](https://kanflow-smart.vercel.app/assets/NguyenDuyCuong-CV-EN.pdf) ([Repository](https://github.com/duycuongdev/curriculum-vitae))
+- **CV (VI):** https://kanflow-smart.vercel.app/cv-vi.html — **PDF:** [NguyenDuyCuong-CV-VI.pdf](https://kanflow-smart.vercel.app/assets/NguyenDuyCuong-CV-VI.pdf)
 - **GitHub:** https://github.com/duycuongdev
 
 ## Highlights
@@ -16,7 +16,7 @@ Personal developer portfolio showcasing my engineering focus as a Fullstack Deve
   - **"Hard problems I had to solve"** section: resilient AI Copilot & multi-model fallback, silent JWT refresh queueing, Dual-Auth cookie fallback for Safari ITP, optimistic UI vs socket reconciliation, and transactional `cardOrderIds` consistency.
   - **Recruiter demo access:** direct login with test account `guest@duycuong.dev` / `Kanflow@2026`.
   - Architectural breakdown covering React + `@dnd-kit` + Redux Toolkit + Kanflow Assistant frontend and Node.js + Express + Socket.IO + MongoDB + Google Gemini API + Dual-Auth + GitHub Actions backend.
-  - Direct links to [Live Demo](https://trello-web-tawny.vercel.app), [Frontend Repo](https://github.com/duycuongdev/Trello_Web), and [Backend Repo](https://github.com/duycuongdev/Trello_Api).
+  - Direct links to [Live Demo](https://kanflow-smart.vercel.app), [Frontend Repo](https://github.com/duycuongdev/Trello_Web), and [Backend Repo](https://github.com/duycuongdev/Trello_Api).
   - Tech stack split honestly into **Proficient** (used in the shipped project, including React, Node.js, MongoDB, Socket.IO, Google Gemini API) and **Familiar** (TypeScript, Tailwind CSS).
 - **Downloadable CV & Direct Contact:** 1-page CV in English & Vietnamese (pre-exported PDFs), plus email/phone/GitHub contact cards.
 
